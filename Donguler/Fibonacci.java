@@ -12,7 +12,6 @@ public class Fibonacci {
 		number = scn.nextInt();
 		
 		if(number>2) {
-			// System.out.print("0 ");
 			for(int i=1; i<=number;i++) {
 				System.out.print(nmbr1+" ");
 				int tmp=nmbr1;
