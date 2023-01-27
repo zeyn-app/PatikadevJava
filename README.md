@@ -1,4 +1,4 @@
 # PatikadevJava
-BootcampHızlandırmaProgramı
+Java101
 
 www.patika.dev
