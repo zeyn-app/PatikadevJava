@@ -1,4 +1,2 @@
 # PatikadevJava
-Java101
-
-www.patika.dev
+Java101 www.patika.dev
