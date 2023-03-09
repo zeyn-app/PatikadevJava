@@ -16,7 +16,7 @@ public class HarmonicAverage {
 		double sum = 0, harmonicAverage;
 		
 		for(int i=0; i < size; i++) {
-			sum += 1/arr[i];
+			sum += 1.0/arr[i];
 		}
 		
 		harmonicAverage = size / sum;
