@@ -10,7 +10,6 @@ public class UserDefinedArray {
 		int length = getElement();
 		
 		printSortedArray(implementArray(length));
-
 	}
 	
 	public static int [] implementArray(int size) {
