@@ -11,7 +11,11 @@ public class MineSweeper {
         mineCount = rowCount * columnCount / 4;
     }
 
-    public void createMine() {
+    public int getMineCount(){
+        return mineCount;
+    }
+
+    private void createMine() {
         int rowIndex, columnIndex;
 
         for (int i = 0; i < mineCount; i++) {
@@ -26,7 +30,7 @@ public class MineSweeper {
         }
     }
 
-    public void calculateNeighborMine() {
+    private void calculateNeighborMine() {
         createMine();
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
@@ -74,12 +78,20 @@ public class MineSweeper {
         return gameBoard;
     }
 
-    public void printGameBoard(String gameBoard[][]) {
+    public void printGameBoard(String[][] gameBoard) {
+        System.out.print(" \t");
+
+        for(int i=0; i<columnCount; i++){
+            System.out.print(i + "\t");
+        }
+
         for (int i = 0; i < rowCount; i++) {
+            System.out.print("\n" +i + "\t");
             for (int j = 0; j < columnCount; j++) {
                 System.out.print(gameBoard[i][j] + "\t");
             }
-            System.out.println();
         }
+
+        System.out.println();
     }
 }
