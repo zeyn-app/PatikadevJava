@@ -63,4 +63,23 @@ public class MineSweeper {
         }
         return gameBoard;
     }
+
+    public String[][] createMaskedGameBoard() {
+        String[][] gameBoard = new String[rowCount][columnCount];
+        for (int i = 0; i < rowCount; i++) {
+            for (int j = 0; j < columnCount; j++) {
+                gameBoard[i][j] = "-";
+            }
+        }
+        return gameBoard;
+    }
+
+    public void printGameBoard(String gameBoard[][]) {
+        for (int i = 0; i < rowCount; i++) {
+            for (int j = 0; j < columnCount; j++) {
+                System.out.print(gameBoard[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
 }
