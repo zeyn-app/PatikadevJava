@@ -14,17 +14,23 @@ public class MineSweeper {
     public int getMineCount(){
         return mineCount;
     }
+    public int getRowCount(){
+        return rowCount;
+    }
+    public int getColumnCount(){
+        return columnCount;
+    }
 
     private void createMine() {
         int rowIndex, columnIndex;
 
         for (int i = 0; i < mineCount; i++) {
-            rowIndex = (int) (Math.random() * (rowCount - 1)) + 1;
-            columnIndex = (int) (Math.random() * (columnCount - 1)) + 1;
+            rowIndex = (int) (Math.random() * (rowCount - 1));
+            columnIndex = (int) (Math.random() * (columnCount - 1));
 
             while (mineMatrix[rowIndex][columnIndex] == -1) {
-                rowIndex = (int) (Math.random() * (rowCount - 1)) + 1;
-                columnIndex = (int) (Math.random() * (columnCount - 1)) + 1;
+                rowIndex = (int) (Math.random() * (rowCount - 1)) ;
+                columnIndex = (int) (Math.random() * (columnCount - 1)) ;
             }
             mineMatrix[rowIndex][columnIndex] = -1;
         }
